@@ -1009,3 +1009,16 @@ body.dark-mode .map-container {
     border: 0;
 }
 
+
+
+.site-logo {
+    height: 40px; /* Ajuste conforme necessário */
+    width: auto;
+    /* A logomarca fornecida já possui as cores desejadas, então não aplicamos filtro de cor aqui. */
+}
+
+body.dark-mode .site-logo {
+    /* Se a logo precisar de uma versão diferente para o modo escuro, o filtro pode ser aplicado aqui. */
+    /* Por enquanto, manter a mesma imagem para ambos os modos. */
+}
+
