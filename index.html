@@ -35,13 +35,22 @@
     </header>
 
     <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="inicio" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-video-placeholder">
+            <!-- Placeholder para vídeo de fundo -->
+            <video autoplay muted loop playsinline class="background-video">
+                <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4"> <!-- Exemplo de vídeo, será substituído -->
+                Seu navegador não suporta a tag de vídeo.
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
         <div class="hero-content">
             <h2>Excelência em Engenharia</h2>
             <p>Soluções de alto padrão para projetos residenciais, comerciais e industriais</p>
             <a href="#contato" class="cta-button">Entre em Contato</a>
         </div>
+        <button id="dark-mode-toggle" aria-label="Alternar modo escuro"></button>
     </section>
 
     <!-- Sobre Nós Section -->
