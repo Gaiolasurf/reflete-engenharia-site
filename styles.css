@@ -1022,3 +1022,17 @@ body.dark-mode .site-logo {
     /* Por enquanto, manter a mesma imagem para ambos os modos. */
 }
 
+
+
+@media (max-width: 768px) {
+    .site-logo {
+        height: 30px; /* Altura menor para dispositivos móveis */
+    }
+}
+
+@media (max-width: 480px) {
+    .site-logo {
+        height: 25px; /* Altura ainda menor para telas muito pequenas */
+    }
+}
+
