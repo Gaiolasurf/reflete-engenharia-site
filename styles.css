@@ -1014,12 +1014,23 @@ body.dark-mode .map-container {
 .site-logo {
     height: 40px; /* Ajuste conforme necessário */
     width: auto;
-    /* A logomarca fornecida já possui as cores desejadas, então não aplicamos filtro de cor aqui. */
+    /* A logomarca fornecida já possui as cores desejadas. */
+    /* Para aumentar a visibilidade, podemos ajustar o brilho ou contraste se necessário, ou garantir que o fundo seja adequado. */
+    /* Se houver uma 'barra branca', pode ser parte da imagem original ou um problema de layout. */
+    /* Vamos garantir que o fundo do header seja sólido para evitar transparências indesejadas. */
 }
 
 body.dark-mode .site-logo {
-    /* Se a logo precisar de uma versão diferente para o modo escuro, o filtro pode ser aplicado aqui. */
-    /* Por enquanto, manter a mesma imagem para ambos os modos. */
+    /* Manter a mesma imagem para ambos os modos, a menos que uma versão específica para dark mode seja fornecida. */
+}
+
+/* Garantir que o header tenha um fundo sólido para a logo */
+header {
+    background-color: var(--primary-dark); /* Fundo escuro para o header */
+}
+
+body.dark-mode header {
+    background-color: var(--background-dark); /* Fundo ainda mais escuro no dark mode */
 }
 
 
@@ -1085,5 +1096,25 @@ body.dark-mode .site-logo {
     .sobre-image {
         margin-top: 20px;
     }
+}
+
+
+
+body.dark-mode .hero-content p {
+    color: #fff; /* Garante que o subtítulo seja branco no modo escuro */
+}
+
+body.dark-mode #menu a {
+    color: #fff; /* Garante que os links do menu sejam brancos no modo escuro */
+}
+
+
+
+body.dark-mode .hero-content p {
+    color: #fff; /* Garante que o subtítulo seja branco no modo escuro */
+}
+
+body.dark-mode #menu a {
+    color: #fff; /* Garante que os links do menu sejam brancos no modo escuro */
 }
 
