@@ -144,23 +144,90 @@ window.addEventListener('load', () => {
     document.body.classList.add('loaded');
 });
 
-// Carrossel de Projetos (Exemplo Básico - será aprimorado)
-const projetosGrid = document.querySelector('.projetos-grid');
-if (projetosGrid) {
-    // Implementação futura de um carrossel real com bibliotecas ou JS puro
-    // Por enquanto, apenas um placeholder para a funcionalidade
+// Carrossel de Projetos
+const projetosCarousel = document.querySelector(".projetos-carousel");
+const carouselButtons = document.querySelectorAll(".carousel-button");
+const carouselDotsContainer = document.querySelector(".carousel-dots");
+
+if (projetosCarousel) {
+    let currentIndex = 0;
+    let itemsPerView = 3; // Default for desktop
+
+    const updateItemsPerView = () => {
+        if (window.innerWidth <= 768) {
+            itemsPerView = 1;
+        } else if (window.innerWidth <= 1024) {
+            itemsPerView = 2;
+        } else {
+            itemsPerView = 3;
+        }
+    };
+
+    const updateCarousel = () => {
+        updateItemsPerView();
+        const itemWidth = projetosCarousel.children[0].offsetWidth;
+        projetosCarousel.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
+        updateDots();
+    };
+
+    const createDots = () => {
+        carouselDotsContainer.innerHTML = "";
+        const totalItems = projetosCarousel.children.length;
+        const totalDots = Math.ceil(totalItems / itemsPerView);
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement("span");
+            dot.classList.add("dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+                currentIndex = i * itemsPerView;
+                updateCarousel();
+            });
+            carouselDotsContainer.appendChild(dot);
+        }
+    };
+
+    const updateDots = () => {
+        const dots = document.querySelectorAll(".carousel-dots .dot");
+        dots.forEach((dot, index) => {
+            if (index === Math.floor(currentIndex / itemsPerView)) {
+                dot.classList.add("active");
+            } else {
+                dot.classList.remove("active");
+            }
+        });
+    };
+
+    carouselButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            const totalItems = projetosCarousel.children.length;
+            const totalDots = Math.ceil(totalItems / itemsPerView);
+
+            if (button.classList.contains("prev")) {
+                currentIndex = Math.max(0, currentIndex - itemsPerView);
+            } else {
+                currentIndex = Math.min(totalItems - itemsPerView, currentIndex + itemsPerView);
+            }
+            updateCarousel();
+        });
+    });
+
+    window.addEventListener("resize", () => {
+        updateItemsPerView();
+        createDots(); // Recreate dots on resize to adjust for itemsPerView
+        updateCarousel();
+    });
+
+    updateItemsPerView();
+    createDots();
+    updateCarousel();
 }
 
-// Integração com Mapa Interativo (Exemplo Básico - será aprimorado)
-const contatoSection = document.getElementById('contato');
-if (contatoSection) {
-    // Implementação futura de mapa interativo (Google Maps API)
-}
+// Integração com Mapa Interativo (já implementado via iframe no HTML)
 
 // Seção de Depoimentos (Adicionando os depoimentos reformulados)
-const sobreSection = document.getElementById('sobre');
+const sobreSection = document.getElementById("sobre");
 if (sobreSection) {
-    const sobreContent = sobreSection.querySelector('.sobre-content');
+    const sobreContent = sobreSection.querySelector(".sobre-content");
     const depoimentosHtml = `
         <div class="depoimentos-section">
             <h2 class="section-title">O que nossos clientes dizem</h2>
@@ -183,9 +250,10 @@ if (sobreSection) {
             </div>
         </div>
     `;
-    sobreContent.insertAdjacentHTML('afterend', depoimentosHtml);
+    sobreContent.insertAdjacentHTML("afterend", depoimentosHtml);
 }
 
 // Otimização de Performance (já coberto por lazy-load e minificação implícita do JS/CSS)
+
 
 
