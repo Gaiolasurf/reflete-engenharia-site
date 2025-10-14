@@ -1144,3 +1144,18 @@ body.dark-mode #menu a {
 
 
 
+
+
+.social-links {
+    margin-top: 10px;
+}
+
+.social-links a {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.social-links img {
+    vertical-align: middle;
+}
+
