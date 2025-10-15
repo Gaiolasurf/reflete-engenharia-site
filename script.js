@@ -188,11 +188,11 @@ const updateContent = () => {
     // Contact Section
     document.querySelector("#contato .section-title").innerHTML = t.contactTitle;
     document.querySelector("#contato .section-subtitle").innerHTML = t.contactSubtitle;
-    document.querySelector(".detail-item:nth-child(1) h3").innerHTML = t.address;
-    document.querySelector(".detail-item:nth-child(1) p").innerHTML = t.addressText;
-    document.querySelector(".detail-item:nth-child(2) h3").innerHTML = t.phone;
-    document.querySelector(".detail-item:nth-child(3) h3").innerHTML = t.email;
-    document.querySelector(".detail-item:nth-child(4) h3").innerHTML = t.cnpj;
+    document.querySelector(".contato-item:nth-child(1) h3").innerHTML = t.address;
+    document.querySelector(".contato-item:nth-child(1) p").innerHTML = t.addressText;
+    document.querySelector(".contato-item:nth-child(2) h3").innerHTML = t.phone;
+    document.querySelector(".contato-item:nth-child(3) h3").innerHTML = t.email;
+    document.querySelector(".contato-item:nth-child(4) h3").innerHTML = t.cnpj;
     // Testimonials Section
     const testimonialsSection = document.querySelector(".depoimentos-section");
     if (testimonialsSection) {
@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }, observerOptions);
 
     // Observar elementos para animação
-    document.querySelectorAll(".servico-categoria, .projeto-card, .detail-item").forEach(el => {
+    document.querySelectorAll(".servico-categoria, .projeto-card, .contato-item").forEach(el => {
         el.style.opacity = "0";
         observer.observe(el);
     });
