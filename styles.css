@@ -359,24 +359,19 @@ body.dark-mode .contato-info .info-item h3 {
     color: var(--primary-gold);
 }
 
-body.dark-mode .info-card {
-    background: var(--secondary-dark);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .info-card h3 {
+body.dark-mode .detail-text h3 {
     color: var(--text-dark);
 }
 
-body.dark-mode .info-card p {
+body.dark-mode .detail-text p {
     color: var(--text-light);
 }
 
-body.dark-mode .info-card a {
+body.dark-mode .detail-text a {
     color: var(--primary-gold);
 }
 
-body.dark-mode .info-card a:hover {
+body.dark-mode .detail-text a:hover {
     color: var(--primary-copper);
 }
 
@@ -579,57 +574,48 @@ section {
     gap: 50px;
 }
 
-.contato-content-centered {
-    max-width: 1000px;
-    margin: 0 auto 50px;
+.contato-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 50px;
 }
 
-.contato-info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    margin-bottom: 20px;
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 400px;
+    text-align: left;
 }
 
-.info-card {
-    background: var(--off-white);
-    padding: 30px 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.info-icon {
+.detail-icon {
     font-size: 2.5rem;
-    margin-bottom: 15px;
+    color: var(--primary-gold);
+    flex-shrink: 0;
 }
 
-.info-card h3 {
-    font-size: 1.1rem;
+.detail-text h3 {
+    font-size: 1.2rem;
     color: var(--primary-dark);
-    margin-bottom: 10px;
-    font-weight: 600;
+    margin-bottom: 5px;
+    font-weight: 700;
 }
 
-.info-card p {
-    font-size: 0.95rem;
+.detail-text p {
+    font-size: 1rem;
     color: var(--text-light);
-    line-height: 1.6;
+    line-height: 1.5;
 }
 
-.info-card a {
+.detail-text a {
     color: var(--accent-blue);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.info-card a:hover {
+.detail-text a:hover {
     color: var(--primary-gold);
 }
 
