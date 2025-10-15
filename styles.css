@@ -363,26 +363,6 @@ body.dark-mode .contato-info .info-item p {
     color: var(--text-light);
 }
 
-body.dark-mode .contato-form {
-    background: var(--secondary-dark);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-}
-
-body.dark-mode .form-group label {
-    color: var(--text-dark);
-}
-
-body.dark-mode .form-group input,
-body.dark-mode .form-group textarea {
-    background-color: #3a3a3a;
-    border-color: #555;
-    color: var(--text-dark);
-}
-
-body.dark-mode .form-group input:focus,
-body.dark-mode .form-group textarea:focus {
-    border-color: var(--primary-gold);
-}
 
 body.dark-mode footer {
     background: var(--secondary-dark);
@@ -610,60 +590,6 @@ section {
     color: var(--primary-gold);
 }
 
-.contato-form {
-    background: var(--off-white);
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-}
-
-.form-group {
-    margin-bottom: 20px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--primary-dark);
-}
-
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 0.95rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--primary-gold);
-}
-
-.submit-button {
-    width: 100%;
-    padding: 15px;
-    background: var(--primary-gold);
-    color: var(--primary-dark);
-    font-weight: 600;
-    font-size: 1rem;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(218, 165, 32, 0.3);
-}
-
-.submit-button:hover {
-    background: var(--primary-copper);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(218, 165, 32, 0.5);
-}
 
 /* Footer */
 footer {

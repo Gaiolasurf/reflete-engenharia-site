@@ -193,10 +193,6 @@ const updateContent = () => {
     document.querySelector(".contato-info .info-item:nth-child(2) h3").innerHTML = t.phone;
     document.querySelector(".contato-info .info-item:nth-child(3) h3").innerHTML = t.email;
     document.querySelector(".contato-info .info-item:nth-child(4) h3").innerHTML = t.cnpj;
-    document.querySelector("label[for=\"nome\"]").innerHTML = t.fullName;
-    document.querySelector("label[for=\"mensagem\"]").innerHTML = t.message;
-    document.querySelector(".submit-button").innerHTML = t.sendMessage;
-
     // Testimonials Section
     const testimonialsSection = document.querySelector(".depoimentos-section");
     if (testimonialsSection) {
@@ -313,26 +309,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initial language load
     setLanguage(currentLang);
-
-    // Form Submission Handler
-    const contactForm = document.getElementById("contact-form");
-
-    if (contactForm) {
-        contactForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            
-            // Coletar dados do formulário
-            const formData = {
-                nome: document.getElementById("nome").value,
-                email: document.getElementById("email").value,
-                telefone: document.getElementById("telefone").value,
-                mensagem: document.getElementById("mensagem").value
-            };
-            
-            alert(translations[currentLang].thanksMessage);
-            contactForm.reset();
-        });
-    }
 
     // Intersection Observer for Animations
     const observerOptions = {
