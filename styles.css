@@ -1104,3 +1104,112 @@ body.dark-mode #menu a {
     vertical-align: middle;
 }
 
+
+
+/* Estilos para a página de Contato (contato.html) */
+
+.contato-page {
+    min-height: 100vh;
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Informações de contato e formulário */
+    gap: 50px;
+    align-items: flex-start;
+    margin-bottom: 50px;
+}
+
+.contato-info {
+    padding: 20px;
+    background: var(--off-white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contato-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contato-form .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contato-form label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--primary-dark);
+}
+
+.contato-form input[type="text"],
+.contato-form input[type="email"],
+.contato-form input[type="tel"],
+.contato-form select,
+.contato-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.contato-form input:focus,
+.contato-form select:focus,
+.contato-form textarea:focus {
+    border-color: var(--primary-gold);
+    outline: none;
+    box-shadow: 0 0 5px rgba(218, 165, 32, 0.5);
+}
+
+.contato-form textarea {
+    resize: vertical;
+}
+
+.contato-form .cta-button {
+    align-self: flex-start;
+    margin-top: 15px;
+}
+
+/* Responsividade para a página de contato */
+@media (max-width: 992px) {
+    .contato-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Dark Mode para a página de Contato */
+body.dark-mode .contato-info {
+    background: var(--secondary-dark);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contato-form form {
+    background: var(--secondary-dark);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .contato-form label {
+    color: var(--primary-gold);
+}
+
+body.dark-mode .contato-form input,
+body.dark-mode .contato-form select,
+body.dark-mode .contato-form textarea {
+    background: var(--primary-dark);
+    color: var(--text-light);
+    border-color: #555;
+}
+
+body.dark-mode .contato-form input:focus,
+body.dark-mode .contato-form select:focus,
+body.dark-mode .contato-form textarea:focus {
+    border-color: var(--primary-gold);
+}
+

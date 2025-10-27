@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5H5HDPFS');</script>
+<!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de Contato da REFLETE ENGENHARIA. Fale conosco para projetos de engenharia de alto padrão.">
+    <title>Contato - REFLETE ENGENHARIA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5H5HDPFS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="https://files.manuscdn.com/user_upload_by_module/session_file/310519663107922306/nadcGREvieymJYmv.jpg" alt="REFLETE ENGENHARIA Logo" class="site-logo"></a>
+            </div>
+            <nav id="nav">
+                <div class="language-selector">
+                    <button class="lang-btn" data-lang="pt">PT</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button id="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="menu">
+                    <li><a href="index.html#inicio">Início</a></li>
+                    <li><a href="index.html#sobre">Sobre Nós</a></li>
+                    <li><a href="index.html#servicos">Serviços</a></li>
+                    <li><a href="index.html#projetos">Projetos</a></li>
+                    <li><a href="contato.html" class="active">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contato Section -->
+    <section id="contato-page" class="contato" style="padding-top: 150px;">
+        <div class="container">
+            <h2 class="section-title">Fale Conosco</h2>
+            <p class="section-subtitle">Estamos prontos para transformar suas ideias em realidade. Preencha o formulário ou use nossos contatos diretos.</p>
+            
+            <div class="contato-grid">
+                <!-- Informações de Contato -->
+                <div class="contato-info">
+                    <div class="contato-item">
+                        <h3>Endereço</h3>
+                        <p>Rua Gavião Peixoto, Icaraí - RJ</p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>Telefone / WhatsApp</h3>
+                        <p><a href="https://wa.me/5521987312363" target="_blank">(21) 98731-2363</a></p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>E-mail</h3>
+                        <p><a href="mailto:contato@refleteengenharia.com.br">contato@refleteengenharia.com.br</a></p>
+                    </div>
+                    <div class="contato-item">
+                        <h3>CNPJ</h3>
+                        <p>63.072.741/0001-06</p>
+                    </div>
+                </div>
+
+                <!-- Formulário de Contato para Netlify -->
+                <div class="contato-form">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/success">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p style="display: none;">
+                            <label>Não preencha: <input name="bot-field" /></label>
+                        </p>
+                        
+                        <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefone">Telefone / WhatsApp:</label>
+                            <input type="tel" id="telefone" name="telefone">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servico">Serviço de Interesse:</label>
+                            <select id="servico" name="servico" required>
+                                <option value="">Selecione um Serviço</option>
+                                <option value="engenharia_projetos">Engenharia e Projetos</option>
+                                <option value="instalacoes_manutencao">Instalações e Manutenção</option>
+                                <option value="obras_estruturas">Obras e Estruturas</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem:</label>
+                            <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="cta-button">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Mapa -->
+            <div class="map-container" style="margin-top: 50px;">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.247693672074!2d-43.12607998496818!3d-22.90641998501239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817f4a2d5b7d%3A0x2a1a0b1a0b1a0b1a!2sRua%20Gavi%C3%A3o%20Peixoto%2C%20Icara%C3%AD%2C%20Niter%C3%B3i%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1678987654321!5m2!1spt-BR!2sbr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 REFLETE ENGENHARIA - Todos os direitos reservados.</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/refleteengenharia?igsh=MWt5MHRrbmlwc2RwbA==" target="_blank" aria-label="Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Icon" style="width: 24px; height: 24px;"></a>
+            </div>
+            <p>CNPJ: 63.072.741/0001-06</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
