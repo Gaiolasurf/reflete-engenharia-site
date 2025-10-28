@@ -1213,3 +1213,162 @@ body.dark-mode .contato-form textarea:focus {
     border-color: var(--primary-gold);
 }
 
+
+
+/* Projetos Section - Carrossel */
+.projetos {
+    background: var(--off-white);
+}
+
+.carousel-container {
+    position: relative;
+    overflow: hidden; /* Importante para esconder itens fora de vista */
+    padding: 20px 0;
+}
+
+.projetos-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* Remover o wrap para que o JS possa controlar o scroll */
+    flex-wrap: nowrap;
+}
+
+.projeto-card {
+    flex: 0 0 auto; /* Não cresce, não encolhe, largura automática */
+    width: calc(33.333% - 20px); /* 3 itens por linha, considerando o gap */
+    margin-right: 30px; /* Espaçamento entre os cards */
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projeto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.projeto-info {
+    padding: 20px;
+}
+
+.projeto-info h3 {
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin-bottom: 10px;
+}
+
+.projeto-info p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+}
+
+/* Botões de Navegação */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(10, 17, 40, 0.7);
+    color: var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: background 0.3s ease;
+}
+
+.carousel-button:hover {
+    background: var(--primary-gold);
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+/* Dots de Navegação */
+.carousel-dots {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-gold);
+}
+
+/* Responsividade do Carrossel */
+@media (max-width: 1024px) {
+    .projeto-card {
+        width: calc(50% - 20px); /* 2 itens por linha */
+    }
+}
+
+@media (max-width: 768px) {
+    .projeto-card {
+        width: 100%; /* 1 item por linha */
+        margin-right: 0;
+    }
+    .carousel-button {
+        display: none; /* Ocultar botões em mobile, usar dots */
+    }
+}
+
+/* Dark Mode para Carrossel */
+body.dark-mode .projetos {
+    background: var(--primary-dark);
+}
+
+body.dark-mode .projeto-card {
+    background: var(--secondary-dark);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .projeto-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .projeto-info h3 {
+    color: var(--primary-gold);
+}
+
+body.dark-mode .projeto-info p {
+    color: var(--text-light);
+}
+
+body.dark-mode .dot {
+    background: #555;
+}
+
+body.dark-mode .dot.active {
+    background: var(--primary-gold);
+}
+
