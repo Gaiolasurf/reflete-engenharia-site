@@ -428,3 +428,44 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+
+
+// Lógica do Formulário para WhatsApp
+document.addEventListener("DOMContentLoaded", () => {
+    const whatsappForm = document.getElementById("whatsapp-form");
+
+    if (whatsappForm) {
+        whatsappForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const nome = document.getElementById("nome").value;
+            const email = document.getElementById("email").value;
+            const telefone = document.getElementById("telefone").value;
+            const servico = document.getElementById("servico").value;
+            const mensagem = document.getElementById("mensagem").value;
+            const phone = this.querySelector('input[name="phone"]').value;
+
+            // Construção da mensagem
+            let text = `*Nova Mensagem de Contato (Site)*\n\n`;
+            text += `*Nome:* ${nome}\n`;
+            text += `*E-mail:* ${email}\n`;
+            text += `*Telefone/WhatsApp:* ${telefone}\n`;
+            text += `*Serviço de Interesse:* ${servico}\n`;
+            text += `*Mensagem:* ${mensagem}\n`;
+
+            // Codificar a mensagem para URL
+            const encodedText = encodeURIComponent(text);
+
+            // Construir a URL final do WhatsApp
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=${phone}&text=${encodedText}`;
+
+            // Redirecionar para o WhatsApp
+            window.open(whatsappUrl, '_blank');
+            
+            // Opcional: Redirecionar para a página de sucesso após o envio (para rastreamento de conversão)
+            // Isso é importante para o Google Ads/Analytics
+            window.location.href = "/success.html";
+        });
+    }
+});
+

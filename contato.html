@@ -79,15 +79,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <!-- Formulário de Contato para Netlify -->
                 <div class="contato-form">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-redirect="/success.html">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p style="display: none;">
-                            <label>Não preencha: <input name="bot-field" /></label>
-                        </p>
+                    <form id="whatsapp-form" method="GET" action="https://api.whatsapp.com/send">
+                        <input type="hidden" name="phone" value="5521987312363" />
+                        
                         
                         <div class="form-group">
                             <label for="nome">Nome Completo:</label>
-                            <input type="text" id="nome" name="nome" required>
+                            <input type="text" id="nome" name="text" required>
                         </div>
                         
                         <div class="form-group">
