@@ -1372,3 +1372,88 @@ body.dark-mode .dot.active {
     background: var(--primary-gold);
 }
 
+
+
+/* Depoimentos Section */
+.depoimentos {
+    background: var(--off-white);
+}
+
+.depoimentos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.depoimento-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-top: 5px solid var(--primary-gold);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.depoimento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.quote-text {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.quote-source {
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-top: auto; /* Empurra para o final do card */
+}
+
+.quote-context {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-top: 5px;
+}
+
+/* Dark Mode para Depoimentos */
+body.dark-mode .depoimentos {
+    background: var(--primary-dark);
+}
+
+body.dark-mode .depoimento-card {
+    background: var(--secondary-dark);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-top: 5px solid var(--primary-gold);
+}
+
+body.dark-mode .depoimento-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .quote-text {
+    color: var(--text-light);
+}
+
+body.dark-mode .quote-source {
+    color: var(--primary-gold);
+}
+
+body.dark-mode .quote-context {
+    color: var(--text-light);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .depoimentos-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
