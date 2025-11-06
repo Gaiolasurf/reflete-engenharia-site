@@ -866,7 +866,7 @@ body.dark-mode .depoimento-card:hover {
 .depoimento-card p {
     font-weight: 600;
     color: var(--primary-dark);
-    text-align: right;
+    text-align: left; /* Alterado de right para left */
 }
 
 body.dark-mode .depoimento-card p {
@@ -909,6 +909,7 @@ body.dark-mode .depoimento-card p {
 @media (max-width: 768px) {
     .projetos-carousel .projeto-card {
         min-width: 100%; /* Mostra 1 card por vez */
+        padding: 0; /* Remove padding que pode causar problemas de largura */
     }
 }
 
@@ -1335,7 +1336,7 @@ body.dark-mode .contato-form textarea:focus {
 @media (max-width: 768px) {
     .projeto-card {
         width: 100%; /* 1 item por linha */
-        margin-right: 0;
+        margin-right: 0 !important; /* Garante que não haja margem extra */
     }
     .carousel-button {
         display: none; /* Ocultar botões em mobile, usar dots */
@@ -1415,6 +1416,7 @@ body.dark-mode .dot.active {
     font-weight: 700;
     color: var(--primary-dark);
     margin-top: auto; /* Empurra para o final do card */
+    text-align: left; /* Garantindo alinhamento à esquerda */
 }
 
 .quote-context {

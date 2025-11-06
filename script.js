@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const updateCarousel = () => {
             updateItemsPerView();
-            const itemWidth = projetosCarousel.children[0].offsetWidth + 30; // 30px é o margin-right do .projeto-card
+            const itemWidth = projetosCarousel.children[0].offsetWidth + (itemsPerView === 1 ? 0 : 30); // 30px é o margin-right do .projeto-card, mas é 0 em mobile
             projetosCarousel.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
             updateDots();
         };
