@@ -1457,3 +1457,61 @@ body.dark-mode .quote-context {
     }
 }
 
+
+
+/* Parcerias Section */
+.parcerias {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--white);
+}
+
+.parceria-card {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 20px 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.parceria-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.parceria-logo {
+    max-width: 150px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.parceria-card:hover .parceria-logo {
+    filter: grayscale(0%);
+}
+
+.parceria-nome {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+/* Dark Mode para Parcerias */
+body.dark-mode .parcerias {
+    background: var(--secondary-dark);
+}
+
+body.dark-mode .parceria-card {
+    background: var(--primary-dark);
+    border: 1px solid var(--border-dark);
+    box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .parceria-nome {
+    color: var(--text-light);
+}
+
