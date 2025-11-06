@@ -22,6 +22,15 @@ const translations = {
         techReports: "Laudos Técnicos (LTCAT)",
         testsAnalysis: "Testes e Análises Técnicas",
         installMaintenanceTitle: "Instalações e Manutenção",
+        electric: "Instalações Elétricas",
+        hydraulic: "Instalações Hidráulicas, Sanitárias e de Gás",
+        consulting: "Consultoria em Gestão Empresarial",
+        maritimeEquipment: "Equipamentos para Navegação Marítima",
+        industrialEquipment: "Instalação de Máquinas e Equipamentos Industriais",
+        diving: "Escafandria e Mergulho",
+        partnershipsTitle: "Parceria Estratégica",
+        partnershipsSubtitle: "Trabalhamos em conjunto com escritórios de arquitetura renomados para garantir a excelência em cada detalhe do seu projeto.",
+        testimonialsSubtitle: "Provas sociais que refletem nossa excelência, precisão e profissionalismo.",
         electricHydraulic: "Instalações Elétricas, Hidráulicas, Sanitárias e de Gás",
         firePrevention: "Sistemas de Prevenção Contra Incêndio",
         acVentilation: "Sistemas de Ar Condicionado, Ventilação e Refrigeração",
@@ -81,6 +90,15 @@ const translations = {
         techReports: "Technical Reports (LTCAT)",
         testsAnalysis: "Tests and Technical Analysis",
         installMaintenanceTitle: "Installations and Maintenance",
+        electric: "Electrical Installations",
+        hydraulic: "Hydraulic, Sanitary, and Gas Installations",
+        consulting: "Business Management Consulting",
+        maritimeEquipment: "Maritime Navigation Equipment",
+        industrialEquipment: "Installation of Industrial Machinery and Equipment",
+        diving: "Scuba Diving and Diving",
+        partnershipsTitle: "Strategic Partnership",
+        partnershipsSubtitle: "We work together with renowned architecture firms to ensure excellence in every detail of your project.",
+        testimonialsSubtitle: "Social proofs that reflect our excellence, precision, and professionalism.",
         electricHydraulic: "Electrical, Hydraulic, Sanitary, and Gas Installations",
         firePrevention: "Fire Prevention Systems",
         acVentilation: "Air Conditioning, Ventilation, and Refrigeration Systems",
@@ -159,19 +177,28 @@ const updateContent = () => {
     document.querySelector(".servico-categoria:nth-child(1) ul li:nth-child(4)").innerHTML = t.techExpertise;
     document.querySelector(".servico-categoria:nth-child(1) ul li:nth-child(5)").innerHTML = t.techReports;
     document.querySelector(".servico-categoria:nth-child(1) ul li:nth-child(6)").innerHTML = t.testsAnalysis;
+    document.querySelector(".servico-categoria:nth-child(1) ul li:nth-child(7)").innerHTML = t.consulting;
 
     document.querySelector(".servico-categoria:nth-child(2) h3").innerHTML = t.installMaintenanceTitle;
-    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(1)").innerHTML = t.electricHydraulic;
-    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(2)").innerHTML = t.firePrevention;
-    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(3)").innerHTML = t.acVentilation;
-    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(4)").innerHTML = t.elevatorsEscalators;
-    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(5)").innerHTML = t.lightingSignaling;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(1)").innerHTML = t.electric;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(2)").innerHTML = t.hydraulic;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(3)").innerHTML = t.firePrevention;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(4)").innerHTML = t.acVentilation;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(5)").innerHTML = t.elevatorsEscalators;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(6)").innerHTML = t.lightingSignaling;
+    document.querySelector(".servico-categoria:nth-child(2) ul li:nth-child(7)").innerHTML = t.maritimeEquipment;
 
     document.querySelector(".servico-categoria:nth-child(3) h3").innerHTML = t.worksStructuresTitle;
     document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(1)").innerHTML = t.worksAdmin;
     document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(2)").innerHTML = t.scaffolding;
     document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(3)").innerHTML = t.metalStructures;
     document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(4)").innerHTML = t.thermalAcoustic;
+    document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(5)").innerHTML = t.industrialEquipment;
+    document.querySelector(".servico-categoria:nth-child(3) ul li:nth-child(6)").innerHTML = t.diving;
+
+    // Parcerias Section
+    document.querySelector("#parcerias .section-title").innerHTML = t.partnershipsTitle;
+    document.querySelector("#parcerias .section-subtitle").innerHTML = t.partnershipsSubtitle;
 
     // Projects Section
     document.querySelector("#projetos .section-title").innerHTML = t.projectsTitle;
@@ -193,13 +220,20 @@ const updateContent = () => {
     document.querySelector(".contato-item:nth-child(2) h3").innerHTML = t.phone;
     document.querySelector(".contato-item:nth-child(3) h3").innerHTML = t.email;
     document.querySelector(".contato-item:nth-child(4) h3").innerHTML = t.cnpj;
+    
     // Testimonials Section
-    const testimonialsSection = document.querySelector(".depoimentos-section");
-    if (testimonialsSection) {
-        testimonialsSection.querySelector(".section-title").innerHTML = t.testimonialsTitle;
-        testimonialsSection.querySelector(".depoimento-card:nth-child(1) blockquote").innerHTML = t.testimonial1;
-        testimonialsSection.querySelector(".depoimento-card:nth-child(2) blockquote").innerHTML = t.testimonial2;
-        testimonialsSection.querySelector(".depoimento-card:nth-child(3) blockquote").innerHTML = t.testimonial3;
+    document.querySelector("#depoimentos .section-title").innerHTML = t.testimonialsTitle;
+    document.querySelector("#depoimentos .section-subtitle").innerHTML = t.testimonialsSubtitle;
+    document.querySelector(".depoimento-card:nth-child(1) .quote-text").innerHTML = t.testimonial1;
+    document.querySelector(".depoimento-card:nth-child(2) .quote-text").innerHTML = t.testimonial2;
+    document.querySelector(".depoimento-card:nth-child(3) .quote-text").innerHTML = t.testimonial3;
+    
+    // Formulário de Contato (contato.html)
+    const contactForm = document.getElementById("whatsapp-form");
+    if (contactForm) {
+        contactForm.querySelector('label[for="nome"]').innerHTML = t.fullName;
+        contactForm.querySelector('label[for="mensagem"]').innerHTML = t.message;
+        contactForm.querySelector('.cta-button').innerHTML = t.sendMessage;
     }
 };
 
