@@ -368,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const updateCarousel = () => {
             updateItemsPerView();
-            const itemWidth = projetosCarousel.children[0].offsetWidth;
+            const itemWidth = projetosCarousel.children[0].offsetWidth + 30; // 30px é o margin-right do .projeto-card
             projetosCarousel.style.transform = `translateX(${-currentIndex * itemWidth}px)`;
             updateDots();
         };
@@ -406,9 +406,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 const totalDots = Math.ceil(totalItems / itemsPerView);
 
                 if (button.classList.contains("prev")) {
-                    currentIndex = Math.max(0, currentIndex - itemsPerView);
+                    currentIndex = Math.max(0, currentIndex - 1);
                 } else {
-                    currentIndex = Math.min(totalItems - itemsPerView, currentIndex + itemsPerView);
+                    currentIndex = Math.min(totalItems - itemsPerView, currentIndex + 1);
                 }
                 updateCarousel();
             });
